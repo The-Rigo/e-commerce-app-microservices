@@ -1,5 +1,6 @@
 package org.rigodev.ecommerce.product;
 
+import jakarta.validation.constraints.NotNull;
 import org.rigodev.ecommerce.category.Category;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,16 @@ public class ProductMapper {
                 product.getCategory().getId(),
                 product.getCategory().getName(),
                 product.getCategory().getDescription()
+        );
+    }
+
+    public ProductPurchaseResponse toProductPurchaseResponse(Product product, Double quantity) {
+        return new ProductPurchaseResponse(
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice(),
+                quantity
         );
     }
 }
