@@ -1,7 +1,6 @@
-package org.rigodev.ecommerce;
+package org.rigodev.ecommerce.handler;
 
 import org.rigodev.ecommerce.exception.CustomerNotFoundException;
-import org.rigodev.ecommerce.handler.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
